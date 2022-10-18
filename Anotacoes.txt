@@ -1,0 +1,29 @@
+
+
+
+
+gulp https://gulpjs.com/docs/en/getting-started/quick-start
+
+https://getbootstrap.com/docs/4.6/getting-started/introduction/
+
+https://sass-lang.com/install
+
+
+https://www.pexels.com/pt-br/
+
+https://nodejs.org/en/
+
+https://www.apachefriends.org/pt_br/index.html
+
+SSAS:
+
+Wordpress: https://br.wordpress.org/download/
+
+GabrielMartins
+
+P0NLH2upqn5F*3cQml
+
+
+https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+https://github.com/wp-bootstrap/wp-bootstrap-navwalker
