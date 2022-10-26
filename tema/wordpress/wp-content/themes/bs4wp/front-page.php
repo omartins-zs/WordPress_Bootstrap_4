@@ -2,37 +2,38 @@
 
 <div class="row">
 
-<!-- Argumentos ($args) -->
-<?php 
-$my_args = array(
-    'post_type' => 'post',
-    'posts_per_page' =>3,
-    'category_name' => 'destaque'
-);
+    <!-- Argumentos ($args) -->
+    <?php
+    $my_args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'category_name' => 'destaque'
+    );
 
-// Query 
-$my_query = new WP_Query($my_args);
-?>
+    // Query 
+    $my_query = new WP_Query($my_args);
+    ?>
 
 
-<?php if($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+    <?php if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
             <div class="col-sm-12 col-md-4 mb-5">
 
                 <div class="card">
-                <?php the_post_thumbnail('post_thumbnail', array('class' => 'img-fluid')) ?>
+                    <?php the_post_thumbnail('post_thumbnail', array('class' => 'img-fluid')) ?>
                     <div class="card-body">
                         <h5 class="card-title mb-4">
-                        <?php the_title() ?>                        </h5>
+                            <?php the_title() ?> </h5>
                         <a href="<?php the_permalink() ?>" class="btn btn-my-color-5">Leia mais</a>
                     </div>
                 </div>
 
             </div>
-            <?php endwhile; endif; ?>
+    <?php endwhile;
+    endif; ?>
 
-            <?php wp_reset_query( ); ?>
+    <?php wp_reset_query(); ?>
 
-        </div>
+</div>
 
 <div class="row">
 
@@ -62,9 +63,8 @@ $my_query = new WP_Query($my_args);
         <?php else : get_404_template();
         endif; ?>
 
-
         <div class="blog-pagination mb-5">
-            <?php next_posts_link( 'Mais antigos' ); ?> <?php previous_posts_link( 'Mais novos' ); ?>
+            <?php next_posts_link('Mais antigos'); ?> <?php previous_posts_link('Mais novos'); ?>
         </div>
 
     </div>
