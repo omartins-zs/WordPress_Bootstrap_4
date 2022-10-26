@@ -1,12 +1,16 @@
 <?php
 
-// Function para chamar a Tag Title do HTML 
-function bs4wp_title_tag()
+// Function para chamar a Tag Title do HTML  e adicionar os formatos de posts
+function bs4wp_theme_support()
 {
+    // Chamar a Tag Title
     add_theme_support('title-tag');
+
+    // Adicionar os formatos de posts
+    add_theme_support('post-formats', array('aside', 'image'));
 }
 
-add_action('after_setup_theme', 'bs4wp_title_tag');
+add_action('after_setup_theme', 'bs4wp_theme_support');
 
 // Previnir erro em Versoes antigos para chamar Tag Title
 if (!function_exists('_wp_render_title_tag')) {
@@ -45,19 +49,19 @@ function posts_link_attributes()
     return 'class="btn - btn-outline-my-color-5"';
 }
 
-//  Criar a barra lateral
+// Criar a barra lateral
 register_sidebar(
     array(
         'name' => 'Barra lateral',
         'id' => 'sidebar',
         'before_widget' => '<div class="card mb-4">',
         'after_widget' => '</div></div>',
-        'before_title' => ' <h5 class="card-header">',
-        'after_title' => '</h5><div class="card-body">'
+        'before_title' => '<h5 class="card-header">',
+        'after_title' => '</h5><div class="card-body">',
     )
 );
 
-//  Criar o campo de busca
+// Criar o campo de busca
 register_sidebar(
     array(
         'name' => 'Busca',

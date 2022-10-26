@@ -28,10 +28,8 @@
             </div>
 
             <div class="col-md-4 col-sm-12">
-                <?php
-                // Adiciona o formulario de buscas
-                dynamic_sidebar('Busca');
-                ?>
+                <?php // Adiciona o fomrulário de buscas
+                dynamic_sidebar('Busca'); ?>
             </div>
 
         </div>
