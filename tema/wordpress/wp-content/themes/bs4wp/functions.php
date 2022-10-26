@@ -57,6 +57,18 @@ register_sidebar(
     )
 );
 
+//  Criar o campo de busca
+register_sidebar(
+    array(
+        'name' => 'Busca',
+        'id' => 'busca',
+        'before_widget' => '<div class="blog-search">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
+    )
+);
+
 // Ativar o formulario para resposta dos comentarios
 function theme_queue_js()
 {
@@ -68,16 +80,21 @@ add_action('wp_print_scripts', 'theme_queue_js');
 //Personalizar os comentarios
 function format_comment($comment, $args, $depth)
 {
-    $GLOBALS['comment'] = $comment ?>
 
-    <div <?php comment_class('ml-4') ?> id="comment-<?php comment_id() ?>" <div class="card">
-        <div class="card-mb-3">
+    $GLOBALS['comment'] = $comment; ?>
+
+    <div <?php comment_class('ml-4'); ?> id="comment-<?php comment_ID(); ?>">
+
+        <div class="card mb-3">
             <div class="card-body">
+
                 <div class="comment-intro">
-                    <h5 class="card-title"><?php primtf(__('1%s'), get_comment_author_link()) ?></h5>
-                    <h6 class="card-subtitle mb-3 text-muted">comentou em <?php printf(__('%1s'), get_comment_date('d/m/y'), get_comment_time()) ?></h6>
+
+                    <h5 class="card-title"><?php printf(__('%s'), get_comment_author_link()) ?></h5>
+                    <h6 class="card-subtitle mb-3 text-muted">Comentou em <?php printf(__('%1$s'), get_comment_date('d/m/y'), get_comment_time()) ?></h6>
 
                 </div>
+
                 <?php comment_text(); ?>
 
                 <div class="reply">
