@@ -1,12 +1,23 @@
+<?php
+// Template Name: Barra Lateral na esquerda
+
+?>
+
 <?php get_header(); ?>
 
 <div class="row">
+
+    <?php get_sidebar(); ?>
 
     <div class="col-md-8 col-sm-12">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                <?php get_template_part('content', get_post_format()); ?>
+                <h3 class="mb-3">
+                    <?php the_title(); ?>
+                </h3>
+
+                <?php the_content(); ?>
 
             <?php endwhile; ?>
 
@@ -14,8 +25,6 @@
         endif; ?>
 
     </div>
-
-    <?php get_sidebar(); ?>
 
 </div>
 

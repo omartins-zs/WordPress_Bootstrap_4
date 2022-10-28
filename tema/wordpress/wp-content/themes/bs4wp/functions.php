@@ -11,6 +11,8 @@ function bs4wp_theme_support()
 
     // Adicionar o logotipo
     add_theme_support('custom-logo');
+
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'bs4wp_theme_support');
@@ -36,6 +38,7 @@ register_nav_menus(array(
 
 // Definir as miniaturas dos posts 
 add_theme_support('post-thumbnails');
+
 set_post_thumbnail_size(1280, 720, true);
 
 // Definir o tamanho do resumo
@@ -118,27 +121,29 @@ function format_comment($comment, $args, $depth)
 // Criar o tipo de post para o banner 
 function create_post_type()
 {
+
     register_post_type(
         'banners',
-        // Definifr as opçoes
+        // Definir as opções
         array(
             'labels' => array(
                 'name' => __('Banners'),
-                'singular_name' =>  __('Banners'),
+                'singular_name' => __('Banners')
             ),
             'supports' => array(
                 'title', 'editor', 'thumbnail'
             ),
             'public' => true,
             'has_archive' => true,
-            // Biblioteca de Icon e Imagens
-            // 'menu_icon' => 'dashicons-images-alt2',
+            'menu_icon' => 'dashicons-images-alt2',
             'rewrite' => array('slug' => 'banners'),
         )
     );
 }
-//  Iniciar o Banner
-add_action( 'init', 'create_post_type' );
+// Iniciar o tipo de post
+// Adicionar imagem em imagens destacada no Painel do Wordpress
+add_action('init', 'create_post_type');
+
 
 // Incluir as funçoes de personalização
 require get_template_directory() . '/inc/customizer.php';
