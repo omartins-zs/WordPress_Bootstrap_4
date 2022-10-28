@@ -16,6 +16,11 @@ https://nodejs.org/en/
 https://www.apachefriends.org/pt_br/index.html
 
 SSAS:
+plaulist https://www.youtube.com/playlist?list=PLBbHLUbqqCrT1gBZtTminYijo8DVpPynE
+
+repositorto do professor https://github.com/rvsanches/BS4-WP
+
+
 
 Wordpress: https://br.wordpress.org/download/
 
