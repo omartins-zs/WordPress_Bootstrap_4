@@ -57,12 +57,13 @@
             </div>
 
             <a class="carousel-control-prev" href="#carouselBSWP" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Anterior</span>
             </a>
+
             <a class="carousel-control-next" href="#carouselBSWP" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Próximo</span>
             </a>
         </div>
 
@@ -94,6 +95,7 @@
                         <h5 class="card-title mb-4">
                             <?php the_title(); ?>
                         </h5>
+
                         <a href="<?php the_permalink(); ?>" class="btn btn-my-color-5">Leia mais</a>
                     </div>
                 </div>

@@ -144,6 +144,5 @@ function create_post_type()
 // Adicionar imagem em imagens destacada no Painel do Wordpress
 add_action('init', 'create_post_type');
 
-
 // Incluir as funçoes de personalização
 require get_template_directory() . '/inc/customizer.php';
