@@ -20,7 +20,9 @@ plaulist https://www.youtube.com/playlist?list=PLBbHLUbqqCrT1gBZtTminYijo8DVpPyn
 
 repositorto do professor https://github.com/rvsanches/BS4-WP
 
+Comando para sass escutar mudanças
 
+ sass --watch node_modules/bootstrap/scss:node_modules/bootstrap/compiler node_modules/font-awesome/scss:node_modules/font-awesome/css style/scss:style/css
 
 Wordpress: https://br.wordpress.org/download/
 
