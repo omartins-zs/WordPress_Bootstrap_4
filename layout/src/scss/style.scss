@@ -1,9 +1,9 @@
 // Cria nosso tema
-$my-color-1: #00A1FF;
-$my-color-2: #E2711D;
-$my-color-3: #FFCD8A;
-$my-color-4: #FFB627;
-$my-color-5: #E65F5C;
+$my-color-1: #2c4554;
+$my-color-2: #5e5856;
+$my-color-3: #1ab6d2;
+$my-color-4: #b4babf;
+$my-color-5: #2818d0;
 
 $theme-colors:(
     "my-color-1": $my-color-1,
@@ -15,6 +15,7 @@ $theme-colors:(
 
 // Classes personlizadas
 $link-color: $my-color-5;
+$body-bg:$my-color-3;
 
 // Deixa as imagens dos posts responsivas
 .size-auto,
@@ -26,5 +27,5 @@ $link-color: $my-color-5;
     height: auto;
 }
 
-// importa o Bootstrap
+// importa o Bootstrap no Arquivo src/css/style.css
 @import "node_modules/bootstrap/scss/bootstrap";
